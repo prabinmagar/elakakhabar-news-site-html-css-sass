@@ -1,0 +1,67 @@
+// section title
+.sc-title{
+    @include flex-jc-between;
+    margin-bottom: 34px;
+    padding-left: 12px;
+    padding-right: 12px;
+    
+    &-text{
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 66px;
+        color: $clr-primary;
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 92%;
+            height: 4px;
+            width: 100px;
+            background-color: $clr-secondary;
+        }
+    
+        @include breakpoint-up(sm){
+            font-size: 25px;
+        }
+        @include breakpoint-up(md){
+            font-size: 30px;
+        }
+        @include breakpoint-up(xl){
+            font-size: 35px;
+        }
+        @include breakpoint-up(xxl){
+            font-size: 40px;
+        }
+    }
+
+    &-link{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.sc-title-2{
+    display: flex;
+    justify-content: center;
+    h3{
+        font-size: 22px;
+        font-weight: 700;
+        background-color: $clr-secondary;
+        color: $clr-white;
+        text-align: center;
+        padding: 6px 18px;
+        position: relative;
+        border-radius: 4px;
+    }
+    margin-bottom: 16px;
+}
+
+// gallery item title
+.gallery-item-title{
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 65px;
+    max-width: 480;
+}

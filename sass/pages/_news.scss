@@ -1,0 +1,164 @@
+.pg-news{
+    .kh-news-list{
+        .itm-card{
+            &-img{
+                height: 300px;
+
+                @include breakpoint-down(xl){
+                    height: 270px;
+                }
+            }
+        }
+    }
+
+    .pg-ns-single{
+        .ns-single{
+            .ns-single-l{
+                @include breakpoint-up(xl){
+                }
+    
+                .ns-head-sc{
+                    padding-top: 47px;
+                    padding-bottom: 47px;
+                }
+                .ns-featured-img{
+                    margin-bottom: 37px;
+                    height: 240px;
+                    @include transition-ease;
+                    &:hover{
+                        box-shadow: rgba(0, 0, 0, 0.16) 0px 6px 10px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                    }
+    
+                    @include breakpoint-up(sm){
+                        height: 320px;
+                    }
+                    @include breakpoint-up(lg){
+                        height: 438px;
+                    }
+                }
+            }
+    
+            .ns-single-r{
+                @include breakpoint-up(xxl){
+                    padding-left: 70px!important;
+                }
+                .ns-block{
+                    &:nth-child(1){
+                        margin-top: 47px;
+    
+                        .itm-card{
+                            .itm-card-img{
+                                height: 120px;
+                            }
+    
+                            @include breakpoint-up(lg){
+                                .itm-card-img{
+                                    height: 90px;
+                                    width: 112px;
+                                }
+                                .itm-card-body{
+                                    padding-right: 14px;
+                                    width: calc(100% - 112px);
+                                }
+                            }
+                        }
+                    }
+    
+                    &:nth-child(2){
+                        .itm-card{
+                            .itm-card-img{
+                                height: 220px;
+    
+                                @include breakpoint-up(lg){
+                                    height: 152px;
+                                }
+                            }
+                        }
+                    }
+    
+                    &:nth-child(3){
+                        .ns-block-img{
+                            padding-right: 12px;
+                            padding-left: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .ns-block-icon{
+            img{
+                @include transition-ease;
+            }
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    
+        .ns-single-info{
+            .ns-block-icon{
+                img{
+                    width: 20px;
+                    @include breakpoint-up(lg){
+                        width: 30px;
+                    }
+                }
+            }
+    
+            > .row{
+                &:nth-child(1){
+                    &.ns-block{
+                        border-top: 1px solid #7B7B7BCC;
+                        border-bottom: 1px solid #7B7B7BCC;
+                        .ns-block-l{
+                            .news-published-date{
+                                @include breakpoint-up(sm){
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                        .ns-block-r{
+                            .ns-block-icon{
+                                margin-right: 24px;
+                            }
+                        }
+                    }
+                }
+    
+                &:nth-child(2){
+                    border-bottom: 1px solid #7B7B7BCC;
+                    .comment-btn{
+                        margin-left: 30px;
+    
+                        @include breakpoint-up(lg){
+                            margin-left: 100px;
+                        }
+                    }
+    
+                    .ns-block-icon{
+                        img{
+                            width: 70%;
+    
+                            @include breakpoint-up(sm){
+                                width: 90%;
+                            }
+                        }
+                    }
+    
+                    .ns-block-r{
+                        li{
+                            margin-right: 15px;
+    
+                            @include breakpoint-up(sm){
+                                margin-right: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

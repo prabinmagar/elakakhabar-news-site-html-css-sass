@@ -1,0 +1,167 @@
+
+// ham burger icon
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 16px;
+
+    > div{
+        width: 24px;
+        height: 2px;
+        background-color: $clr-black;
+        @include transition-ease;
+    }
+    &:hover{
+        .line-1{
+            width: 18px;
+        }
+        .line-3{
+            width: 18px;
+        }
+    }
+}
+
+.icon-btn{
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    font-size: 25px;
+    @include flex-center;
+}
+
+// icon link 
+.link-icon{
+    width: 31px;
+    height: 31px;
+    color: $clr-primary;
+    @include flex-center;
+    border-radius: 50%;
+    background-color: $clr-whitesmoke;
+    @include transition-ease;
+
+    &:hover{
+        background-color: $clr-primary;
+        color: $clr-white;
+    }
+}
+
+// item button link
+.itm-btn-link{
+    display: flex;
+    align-items: center;
+    outline: 0;
+    border: none;
+    @include transition-ease;
+
+    span{
+        &:nth-child(1){
+            margin-right: 12px;
+        }
+    }
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+// vid play button
+.vid-play-btn{
+    width: 70px;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 10px 50px;
+    border-radius: 50%;
+    @include transition-ease;
+    animation: scaleEffect ease-in-out infinite 2500ms;
+
+    @keyframes scaleEffect{
+        0%{transform: scale(1);}
+        50%{transform: scale(1.2);}
+        100%{transform: scale(1);}
+    }
+    
+}
+%btn-shared{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 2%;
+    line-height: 44px;
+    padding: 2px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    @include transition-ease;
+}
+
+.btn-primary{
+    @extend %btn-shared;
+    background: $clr-primary;
+    color: $clr-white;
+
+    &:hover{
+        background-color: transparent;
+        color: $clr-primary;
+    }
+}
+
+.btn-secondary{
+    @extend %btn-shared;
+    background: $clr-secondary;
+    color: $clr-white;
+
+    &:hover{
+        background-color: transparent;
+        color: $clr-secondary;
+        border-color: $clr-secondary;
+    }
+}
+
+.flat-btn-secondary{
+    font-size: 25px;
+    padding: 6px 40px;
+    background-color: $clr-secondary;
+    color: $clr-white;
+
+    &:hover{
+        color: $clr-secondary;
+        background-color: transparent;
+        border-color: $clr-secondary;
+    }
+}
+
+.social-link-btn{
+    border: none;
+    background-color: #E9F1FF;
+    padding: 11px 14px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    @include transition-ease;
+
+    span{
+        font-size: 16px;
+        line-height: 24px;
+        color: #4285F4;
+        font-weight: 400;
+    }
+
+    &:hover, &:focus{
+        border: none;
+        transform: scale(0.95);
+    }
+}
+
+// read link
+.read-link{
+    span{
+        @include transition-ease;
+    }
+    &:hover{
+        color: $clr-primary!important;
+        span{
+            &:last-child{
+                padding-left: 6px;
+            }
+        }
+    }
+}
